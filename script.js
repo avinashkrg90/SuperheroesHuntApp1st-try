@@ -261,7 +261,12 @@ myFavNavButton.addEventListener("click", () => {
 // Function run when window is loaded
 window.onload = () => {
     getRsult();
-    countFav.innerHTML = `(${fav_char_id_list.length} favourites)`;
+    try {
+        countFav.innerHTML = `(${fav_char_id_list.length} favourites)`;
+    }
+    catch () {
+        countFav.innerHTML = `(0 favourites)`;
+    }
     fav_char_id_list.forEach((charId) => {
         addToFav(charId);
         windowLoaded = false;
