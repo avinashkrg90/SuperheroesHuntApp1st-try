@@ -148,7 +148,7 @@ addToFav = async (charID) => {
                 showModal(characterID);
             });
         });
-        if (!fav_char_id_list.includes(charID)) {
+        if (fav_char_id_list.length == 0 || !fav_char_id_list.includes(charID)) {
             fav_char_id_list.push(charID);
             localStorage.setItem('id-array', JSON.stringify(fav_char_id_list));
         }
