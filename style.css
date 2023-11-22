@@ -1,0 +1,430 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #e01a38;
+    background-image: url('images/bg18.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.topnav {
+    background-color: #171821;
+    display: flexbox;
+    padding: 8px 50px;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    color: white;
+    text-decoration: none;
+    font-size: 2.3rem;
+    float: left;
+    text-align: center;
+    padding: 4px 8px;
+    text-decoration: none;
+}
+
+#logo-span {
+    font-size: 1rem;
+}
+
+.navbar-btn {
+    float: right;
+    text-align: center;
+    padding: 16px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    color: #171821;
+    background-color: rgb(241, 195, 195);
+    cursor: pointer;
+    border-style: none;
+    margin: 5px 10px;
+}
+
+.navbar-btn:hover {
+    color: white;
+    background-color: rgb(233, 45, 45);
+}
+
+.body-container {
+    display: grid;
+    grid-template-columns: 9fr 4fr;
+    gap: 1em;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.input-container {
+    margin: 10px 10px;
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    gap: 1em;
+    width: 60%;
+    text-align: center;
+}
+
+input {
+    padding: 0.6em 0.5em;
+    background-color: white;
+    color: #171821;
+    border: none;
+    border-radius: 0.5em;
+    opacity: 60%;
+    outline: none;
+    font-size: 18px;
+}
+
+.search-button {
+    outline: none;
+    border: none;
+    background-color: #171821;
+    color: #ffffff;
+    border-radius: 0.5em;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: rgb(241, 195, 195);
+    color: #171821;
+}
+
+.display-container {
+    margin: 8px 8px;
+    padding: 1em;
+}
+
+.container-character-image {
+    background-color: #ffffff;
+    padding: 0.4em;
+    height: 15em;
+    width: 15em;
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px 2px rgb(112, 114, 122);
+}
+
+.container-character-image img {
+    width: 100%;
+    position: relative;
+    width: block;
+    border-radius: 50%;
+}
+
+.character-name {
+    padding: 0.5em 0 0.8em 0;
+    text-align: center;
+    /* color: #ffffff; */
+    color: #2f2f35;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.character-description {
+    text-align: justify;
+    color: #a0a0a6;
+    line-height: 2em;
+    font-weight: 300;
+}
+
+.favourite-container {
+    float: left;
+    height: auto;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.favourite-title-bar {
+    display: flexbox;
+    overflow: hidden;
+    background-color: white;
+    padding: 10px;
+}
+
+.favourite-container h2 {
+    float: left;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+    color: #171821;
+}
+
+.close-btn {
+    float: right;
+    width: 30px;
+    max-width: 40px;
+    height: auto;
+    font-size: 20px;
+    font-weight: 700;
+    border-style: none;
+    background-color: #171821;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+}
+
+.close-btn:hover {
+    background-color: #ffffff;
+    color: #171821;
+    border: 2px solid #171821;
+}
+
+.favourite-list-container {
+    height: 90vh;
+    overflow-y: scroll;
+}
+
+#show-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 90vh;
+    /* min-height: 20hv; */
+    overflow-y: scroll;
+}
+
+.card-container {
+    width: 15vw;
+    max-height: 50vh;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgb(241, 195, 195, 0.6);
+    overflow: hidden;
+}
+
+.character-addToFav-btn {
+    border-style: none;
+    background-color: #171821;
+    color: rgb(241, 195, 195);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.character-detail-btn {
+    float: right;
+    border-style: none;
+    border: 2px solid #171821;
+    color: #171821;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.character-addToFav-btn:hover {
+    background-color: rgb(233, 45, 45);
+    color: #171821;
+}
+
+.character-detail-btn:hover {
+    border: 2px solid rgb(233, 45, 45);
+    color: rgb(233, 45, 45);
+}
+
+
+/* Styling favourite container display */
+.fav-card-container {
+    width: auto;
+    height: 12.8em;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 15px;
+    background: rgba(27, 26, 39, 1);
+    display: grid;
+    grid-template-columns: 4fr 7fr;
+}
+
+.fav-container-character-image {
+    background-color: rgb(204, 43, 43);
+    /* padding: 0.4em; */
+    height: 11em;
+    width: 11em;
+    display: block;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.fav-container-character-image img {
+    width: 100%;
+    position: relative;
+    width: block;
+    border-radius: 20px;
+}
+
+.fav-character-name {
+    padding: 0.2em 0 0.2em 0;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.fav-character-description {
+    text-align: justify;
+    color: #ffffff;
+    line-height: 2em;
+    font-weight: 300;
+    height: 6vh;
+    overflow: hidden;
+    line-height: 1em;
+    margin-bottom: 1em;
+    padding: 0px 1em;
+}
+
+.fav-character-detail-btn {
+    border-style: none;
+    color: #171821;
+    font-weight: 600;
+    border: 2px solid rgb(241, 195, 195);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.fav-character-remove-btn {
+    float: right;
+    border-style: none;
+    background-color: rgb(204, 43, 43);
+    border: 2px solid rgb(233, 45, 45);
+    color: #ffffff;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.fav-character-detail-btn:hover {
+    background-color: rgb(233, 45, 45);
+    color: #171821;
+}
+
+.fav-character-remove-btn:hover {
+    background-color: rgb(241, 195, 195);
+    color: #171821;
+    font-weight: 600;
+    border: 2px solid rgb(233, 45, 45);
+}
+
+#countFavChar {
+    color: #e01a38;
+}
+
+/* Styling Modal for displaying details of a character starts here*/
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 20px;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-card-container {
+    width: auto;
+    margin: 8px;
+    margin-right: 25px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(27, 26, 39, 1);
+    display: grid;
+    grid-template-columns: 4fr 7fr;
+}
+
+.modal-container-character-image {
+    background-color: rgb(204, 43, 43);
+    height: 25em;
+    width: 25em;
+    display: block;
+    margin: auto;
+    border-radius: 20px;
+}
+
+.modal-container-character-image img {
+    width: 100%;
+    position: relative;
+    width: block;
+    border-radius: 20px;
+}
+
+.modal-character-description {
+    text-align: justify;
+    color: #ffffff;
+    line-height: 2em;
+    font-weight: 300;
+    line-height: 1em;
+    margin-bottom: 1em;
+}
+
+.modal-character-description,
+.modal-character-comics,
+.modal-character-stories,
+.modal-character-events,
+.modal-character-series,
+.modal-character-modified {
+    color: #ffffff;
+    line-height: 2em;
+    font-weight: 500;
+    line-height: 1.5em;
+    font-size: 1.5em;
+}
+
+.modal-character-name {
+    padding: 0.2em 0 0.2em 0;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+/* Styling Modal for displaying details of a character ends here*/

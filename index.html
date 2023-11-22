@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+
+  <title>Super heroes hunt...</title>
+</head>
+
+<body>
+  <!-- top navigatin bar -->
+  <div class="topnav">
+    <a href="#home">Superheroes hunt app <span id="logo-span">(created by Avinash Kumar Gupta)</span></a>
+    <button class="navbar-btn split" id="my-fav-nav-btn" type="button">
+      My favourite superheroes
+    </button>
+    <button class="navbar-btn split" id="search-nav-btn" type="button">
+      Search superheroes
+    </button>
+  </div>
+
+  <!-- Main body below the container -->
+  <div class="body-container">
+
+    <!-- container for search bar and results -->
+    <div class="search-container">
+      <div class="d-flex">
+        <div class="input-container">
+          <input type="text" class="input" value="iron man" id="input-box" />
+          <button class="search-button" id="search-button">Search</button>
+        </div>
+      </div>
+      <div class="display-container" id="show-container"></div>
+    </div>
+
+    <!-- container for displaying favourite chracter -->
+    <div class="favourite-container" id="favourite-box">
+      <div class="favourite-title-bar">
+        <h2>My favourite superheros <span id="countFavChar"></span></h2>
+        <button class="close-btn float-right" type="button" id="fav-close-btn">
+          x
+        </button>
+      </div>
+      <div class="favourite-list-container" id="fav_list_container">
+      </div>
+    </div>
+
+  </div>
+
+  <!-- The Modal for showing a character's details-->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="modalDiv"></div>
+    </div>
+  </div>
+
+  <!-- including external javascript files -->
+  <script src="api-data.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
