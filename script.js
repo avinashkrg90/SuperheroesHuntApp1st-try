@@ -265,7 +265,7 @@ window.onload = () => {
         countFav.innerHTML = `(${fav_char_id_list.length} favourites)`;
     }
     catch () {
-        countFav.innerHTML = `(0 favourites)`;
+        countFav.innerHTML = '0 favourites';
     }
     fav_char_id_list.forEach((charId) => {
         addToFav(charId);
